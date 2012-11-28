@@ -1,0 +1,75 @@
+/**
+
+//HTML5 Boilerplate + Normalize
+*= require "_vendor/normalize.css"
+*= require "_vendor/html5bp.css"
+
+//Grid
+*= require "_layout/grid"
+
+*/
+
+/* IMPORTS ********************************************************************************************/
+
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/layout";
+
+/* INCLUDES ********************************************************************************************/
+
+@include font-face("chunkfive", font-files("chunkfive-webfont.woff", "chunkfive-webfont.ttf", "chunkfive-webfont.svg"), "chunkfive-webfont.eot");
+@include font-face("honeyscript-semibold", font-files("honeyscript-semibold-webfont.woff", "honeyscript-semibold-webfont.ttf", "honeyscript-semibold-webfont.svg"), "honeyscript-semibold-webfont.eot");
+@include sticky-footer(30px, ".page", ".page-footer", "footer");
+
+/* LAYOUT ********************************************************************************************/
+
+html, body { height: 100%; }
+
+body {
+  background-color: #e1dfac;
+  background-image: url("../images/bg-body.png");
+  background-position: top left;
+  background-repeat: repeat;
+  color: #333;
+  text-align: center;
+}
+
+.page {
+  margin-top: 6em;
+}
+
+footer {
+  height: 30px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+h1 {
+  @include text-shadow(1px 1px 1px #fff);
+  color: #347575;
+  font-family: "chunkfive";
+  font-size: 1.8em;
+  text-transform: uppercase;
+}
+
+h2 {
+  @include text-shadow(1px 1px 1px #333);
+  color: #ed4c57;
+  font-family: "honeyscript-semibold";
+  font-size: 26em;
+  text-transform: lowercase;
+}
+
+h3 {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 1.2em;
+}
+
+a {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  &:hover {
+    color: #14a3a3;
+  }
+}
